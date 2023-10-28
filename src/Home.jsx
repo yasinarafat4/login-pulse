@@ -1,17 +1,16 @@
-import Footer from "./components/Shared/Footer";
-import Navbar from "./components/Shared/Navbar";
+import "./Home.css";
+import LoginForm from "./components/LoginForm";
+import LoginImage from "./components/LoginImage";
 
 const Home = () => {
   return (
     <>
-      {/* Navber */}
-      <Navbar />
-      {/* Login Container */}
-      <div>
-        <h2>Login Pulse</h2>
+      <div className="container">
+        {/* Image Container*/}
+        <LoginImage />
+        {/* Form Container */}
+        <LoginForm />
       </div>
-      {/* Footer */}
-      <Footer />
     </>
   );
 };
