@@ -7,15 +7,16 @@ const Form = styled.form`
   box-shadow: 10px 10px 10px 10px rgba(216, 215, 215, 0.5);
   border-radius: 10px;
   font-family: poppins;
-  @media only screen and (max-width: 1024px) {
-      width: 400px;
-      margin: auto;
-  }
   
   @media only screen and (max-width: 778px) {
       width: 100%;
       margin: auto;
   }
+
+  @media only screen and (max-width: 1024px) {
+    width: 400px;
+    margin: auto;
+}
   }
 `;
 

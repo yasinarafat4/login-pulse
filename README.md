@@ -1,8 +1,8 @@
 # Login Pulse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a responsive login screen displays well on different screen sizes, including desktops, tablets, and mobile devices. Whether you're using a computer, tablet, or phone. It adjusts itself to fit your screen, so it's easy to log in no matter what you're using.
 
-Currently, two official plugins are available:
+## Resources & Credits
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Styles -> [Styled-Components](https://styled-components.com/)
+- Icons -> [React Icons](https://react-icons.github.io/react-icons/)
