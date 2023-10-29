@@ -1,21 +1,31 @@
 import React, { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-import "./common.css";
+import Button from "./styles/Button.styles";
+import ButtonContainer from "./styles/ButtonContainer.styles";
+import Checkbox from "./styles/Checkbox.styles";
+import EyeIcons from "./styles/EyeIcons.styles";
+import Form from "./styles/Form.styles";
+import Input from "./styles/Input.styles";
+import Label from "./styles/Label.styles";
+import LabelText from "./styles/LabelText.styles";
+import PasswordContainer from "./styles/PasswordContainer.styles";
+import RegisterText from "./styles/RegisterText.styles";
+import SpanText from "./styles/SpanText.styles";
+import Text from "./styles/Text.styles";
 import Title from "./styles/Title.styles";
 
 const LoginForm = () => {
   const [togglePasswordVisible, setTogglePasswordVisible] = useState(false);
 
   return (
-    <form className="form">
+    <Form>
       <Title>Login</Title>
       {/* Login ID field */}
       <div>
         <label>Login ID</label>
-        <input
+        <Input
           type="text"
           placeholder="Enter Login ID"
-          className="input-field"
           id="loginId"
           name="loginId"
           required
@@ -23,52 +33,45 @@ const LoginForm = () => {
       </div>
 
       {/* Password field */}
-      <div className="password-container">
+      <PasswordContainer>
         <label>Password</label>
-        <input
+        <Input
           type={togglePasswordVisible ? "text" : "password"}
           id="password"
           placeholder="Enter Your Password"
-          className="input-field"
           required
         />
-        <div
+        <EyeIcons
           onClick={() => setTogglePasswordVisible(!togglePasswordVisible)}
-          className="eye-container"
         >
           {togglePasswordVisible ? <AiFillEye /> : <AiFillEyeInvisible />}
-        </div>
-      </div>
+        </EyeIcons>
+      </PasswordContainer>
 
       {/* Checkbox Containers */}
-      <div className="checkbox-1">
+      <Checkbox>
         <label>
           <input type="checkbox" name="myCheckbox" id="myCheckbox" />
           Remember Me
         </label>
-        <p className="cng-pass">Change Password</p>
-      </div>
-      <div className="checkbox-2">
-        <label>
-          <input type="checkbox" name="myCheckbox" id="myCheckbox" />
-          Agree to <span className="span-text">Terms & Coditions</span>
-        </label>
-      </div>
+        <Text>Change Password</Text>
+      </Checkbox>
+      <Label>
+        <input type="checkbox" name="myCheckbox" id="myCheckbox" />
+        <LabelText>
+          Agree to <SpanText>Terms & Coditions</SpanText>
+        </LabelText>
+      </Label>
 
       {/* Login button */}
-      <div className="btn-container">
-        <button
-          className="login-btn"
-          type="submit"
-        >
-          Login
-        </button>
-      </div>
-      <p className="register-text">
+      <ButtonContainer>
+        <Button type="submit">Login</Button>
+      </ButtonContainer>
+      <RegisterText>
         Don&apos;t have an account?
-        <span className="span-text"> Register Here</span>
-      </p>
-    </form>
+        <SpanText>Register Here</SpanText>
+      </RegisterText>
+    </Form>
   );
 };
 
